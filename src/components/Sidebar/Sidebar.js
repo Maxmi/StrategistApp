@@ -1,6 +1,8 @@
 import React from 'react';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
+import ActionHome from 'material-ui/svg-icons/action/home';
+import {cyan500} from 'material-ui/styles/colors';
 
 import Section from '../Section/Section';
 import AddSection from '../AddSection/AddSection';
@@ -9,14 +11,18 @@ import AddSection from '../AddSection/AddSection';
 //and Add Secton component at the bottom
 
 const Sidebar = (props) => (
-  // <div className="sidebar">
-  //   <Section sectionName={'Urgent & Important'}/>
-  //   <Section sectionName={'Urgent but less Important'}/>
-  //   <Section sectionName={'Less urgent but Important'}/>
-  //   <Section sectionName={'Neither Urgent, nor Important'}/>
-  //   <AddSection />
-  // </div>
-  <Drawer open={false}>
+  <Drawer
+    open={props.open}
+    docked={false}
+    onRequestChange={open => props.onToggle(open)}
+    >
+    <MenuItem
+      leftIcon={
+        <ActionHome color={cyan500}/>
+      }
+      >
+        <Section sectionName={''}/>
+    </MenuItem>
     <MenuItem><Section sectionName={'Urgent & Important'}/></MenuItem>
     <MenuItem><Section sectionName={'Urgent but less Important'}/></MenuItem>
     <MenuItem><Section sectionName={'Less urgent but Important'}/></MenuItem>

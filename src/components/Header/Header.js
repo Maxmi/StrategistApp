@@ -21,11 +21,11 @@ const Logged = () => (
   </IconMenu>
 );
 
-const Header = () => (
+const Header = (props) => (
   <AppBar
-    title="StrategistApp"
+    title="Menu"
     iconElementRight={<Logged />}
-    onLeftIconButtonClick={ () => console.log('clicked')}
+    onLeftIconButtonClick={ () => props.onLeftIconClick()}
     />
 );
 
