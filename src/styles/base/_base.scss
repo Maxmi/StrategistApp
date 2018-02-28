@@ -3,7 +3,10 @@ html {
 }
 
 body {
-  font-family: Helvetica, Arial, sans-serif;
+  width: 90%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  font-family: 'Roboto', sans-serif;
   font-size: $m-size;
 }
 

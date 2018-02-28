@@ -1,0 +1,24 @@
+.sidebar {
+  border: 1px solid green;
+  // float: left;
+  // display: inline-block;
+  // width: 300px;
+  float: left;
+  width: 24.8%;
+  height: 100%;
+  // overflow: hidden;
+}
+
+.title {
+  padding: 10px;
+  border: 1px solid #000;
+}
+
+.app-name {
+  margin: 0;
+}
+
+.quote {
+  margin: 0;
+  font-style: italic;
+}

@@ -1,20 +1,10 @@
 import React from 'react';
+import Objective from '../Objective/Objective';
 
 //Planner component will consist of many Objective comp-s
 const Planner = () => (
-  <div>
-    <div>
-      <p>Add an Objective</p>
-      <p>Add a step</p>
-    </div>
-    <div>
-      <p>Add an Objective</p>
-      <p>Add a step</p>
-    </div>
-    <div>
-      <p>Add an Objective</p>
-      <p>Add a step</p>
-    </div>
+  <div className="planningBar">
+    <Objective />
   </div>
 );
 
