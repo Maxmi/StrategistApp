@@ -23,7 +23,7 @@ const Logged = () => (
 
 const Header = (props) => (
   <AppBar
-    title="Menu"
+    title="StrategistApp"
     iconElementRight={<Logged />}
     onLeftIconButtonClick={ () => props.onLeftIconClick()}
     />
