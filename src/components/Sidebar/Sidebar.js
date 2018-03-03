@@ -3,6 +3,7 @@ import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
 import ActionHome from 'material-ui/svg-icons/action/home';
 import {cyan500} from 'material-ui/styles/colors';
+import { Link } from 'react-router-dom'
 
 import Section from '../Section/Section';
 import AddSection from '../AddSection/AddSection';
@@ -17,13 +18,14 @@ const Sidebar = (props) => (
     onRequestChange={open => props.onToggle(open)}
     >
     <MenuItem
-      leftIcon={
-        <ActionHome color={cyan500}/>
-      }
+      // leftIcon={
+      //   <ActionHome color={cyan500}/>
+      // }
       >
         <Section sectionName={''}/>
     </MenuItem>
-    <MenuItem><Section sectionName={'Urgent & Important'}/></MenuItem>
+    <MenuItem><Link to="/">Home</Link></MenuItem>
+    <MenuItem><Link to="/urgent-and-important">Urgent and Important</Link></MenuItem>
     <MenuItem><Section sectionName={'Urgent but less Important'}/></MenuItem>
     <MenuItem><Section sectionName={'Less urgent but Important'}/></MenuItem>
     <MenuItem><Section sectionName={'Neither Urgent, nor Important'}/></MenuItem>
